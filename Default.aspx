@@ -9,7 +9,7 @@
     </div>
 
     <div class="row">
-        <div class="col-md-4">
+         <div class="btn-group btn-group-justified">
             <asp:Button ID="Button1" runat="server" CssClass="bg-primary" Text="Alumnos" OnClick="Button1_Click" />
             <asp:Button ID="Button2" runat="server" CssClass="bg-primary" Text="Profesores" OnClick="Button2_Click" />
             <asp:Button ID="Button3" runat="server" CssClass="bg-primary" Text="Personal Administrativo" OnClick="Button3_Click" />
@@ -40,7 +40,7 @@
             <br />
             <asp:Label ID="iniciolab_lb" runat="server" Text="Inicio Labores:" Visible="False"></asp:Label>
 
-            <asp:Calendar ID="iniciolab_cd" runat="server" BackColor="White" BorderColor="Black" BorderStyle="Solid" CellSpacing="1" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="250px" NextPrevFormat="ShortMonth" Visible="False" VisibleDate="1999-01-01" Width="330px">
+            <asp:Calendar ID="iniciolab_cd" runat="server" BackColor="White" BorderColor="Black" BorderStyle="Solid" CellSpacing="1" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="250px" NextPrevFormat="ShortMonth" Visible="False" Width="330px">
                 <DayHeaderStyle Font-Bold="True" Font-Size="8pt" ForeColor="#333333" Height="8pt" />
                 <DayStyle BackColor="#CCCCCC" />
                 <NextPrevStyle Font-Bold="True" Font-Size="8pt" ForeColor="White" />
@@ -52,7 +52,7 @@
             <br />
             <asp:Label ID="finallab_lb" runat="server" Text="Final de Labores:" Visible="False"></asp:Label>
 
-            <asp:Calendar ID="finallab_cd" runat="server" BackColor="White" BorderColor="Black" BorderStyle="Solid" CellSpacing="1" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="250px" NextPrevFormat="ShortMonth" Visible="False" VisibleDate="1999-01-01" Width="330px">
+            <asp:Calendar ID="finallab_cd" runat="server" BackColor="White" BorderColor="Black" BorderStyle="Solid" CellSpacing="1" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="250px" NextPrevFormat="ShortMonth" Visible="False" Width="330px">
                 <DayHeaderStyle Font-Bold="True" Font-Size="8pt" ForeColor="#333333" Height="8pt" />
                 <DayStyle BackColor="#CCCCCC" />
                 <NextPrevStyle Font-Bold="True" Font-Size="8pt" ForeColor="White" />
@@ -61,6 +61,14 @@
                 <TitleStyle BackColor="#333399" BorderStyle="Solid" Font-Bold="True" Font-Size="12pt" ForeColor="White" Height="12pt" />
                 <TodayDayStyle BackColor="#999999" ForeColor="White" />
             </asp:Calendar>
+        <asp:Button ID="alumno_bt" runat="server" CssClass="btn btn-primary btn-sm" Text="Agregar Alumno" Visible="False" OnClick="alumno_bt_Click"/>
+        <asp:Button ID="profesor_bt" runat="server" CssClass="btn btn-primary btn-sm" Text="Agregar Profesor" Visible="False" OnClick="profesor_bt_Click"/>
+        <asp:Button ID="personal_bt" runat="server" CssClass="btn btn-primary btn-sm" Text="Agregar Personal de Administración" Visible="False" OnClick="personal_bt_Click"/>
+        <br />
+        <p>
+            <br />
+            <asp:Button ID="universidadbt" runat="server" CssClass="btn btn-primary btn-block" Text="Agregar Persona/s de Universidad" OnClick="universidadbt_Click" />
+        </p>
     </div>
 
 </asp:Content>
