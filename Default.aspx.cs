@@ -24,7 +24,6 @@ namespace Universidades_y_Personas
                 string json = jsonStream.ReadToEnd(); jsonStream.Close();
                 if (json.Length > 0)
                     unis = JsonConvert.DeserializeObject<List<Universidades>>(json);
-
             }
         }
 
@@ -53,14 +52,14 @@ namespace Universidades_y_Personas
             nombreA_txt.Text = "";
             apellidoA_txt.Text = "";
             direccionA_txt.Text = "";
-            Calendar1.SelectedDate = DateTime.Parse("1999-01-01");
+            Calendar1.SelectedDate = DateTime.Parse("1999-01-01T00:00:00");
             carneal_txt.Text = "";
             id_txt.Text = "";
             igss_txt.Text = "";
             profesion_txt.Text = "";
             titulo_txt.Text = "";
-            iniciolab_cd.SelectedDate = DateTime.Now;
-            finallab_cd.SelectedDate = DateTime.Now;
+            iniciolab_cd.SelectedDate = DateTime.Today;
+            finallab_cd.SelectedDate = DateTime.Today;
         }
         protected void Button1_Click(object sender, EventArgs e)
         {
