@@ -42,6 +42,15 @@ namespace Universidades_y_Personas
         protected global::System.Web.UI.WebControls.GridView GridView2;
 
         /// <summary>
+        /// Control alumnobt.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button alumnobt;
+
+        /// <summary>
         /// Control profesor_lb.
         /// </summary>
         /// <remarks>
@@ -58,6 +67,15 @@ namespace Universidades_y_Personas
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView GridView3;
+
+        /// <summary>
+        /// Control profebt.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button profebt;
 
         /// <summary>
         /// Control personal_lb.

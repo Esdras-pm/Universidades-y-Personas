@@ -25,19 +25,36 @@ namespace Universidades_y_Personas
             GridView1.DataSource = unis;
             GridView1.DataBind();
         }
-
+        void esconder()
+        {
+            alumnobt.Visible = false;
+            profebt.Visible = false;
+            alumno_lb.Text = "";
+            profesor_lb.Text = "";
+            personal_lb.Text = "";
+        }
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
             int selec = GridView1.SelectedIndex;
-            alumno_lb.Text = "Alumnos de Mesoamericana:";
+            esconder();
             GridView2.DataSource = unis[selec].Alumno;
             GridView2.DataBind();
-            profesor_lb.Text = "Profesores de Mesoamericana:";
             GridView3.DataSource = unis[selec].Profesor;
             GridView3.DataBind();
-            personal_lb.Text = "Personal Administratico de Mesoamericana:";
             GridView4.DataSource = unis[selec].Personal;
             GridView4.DataBind();
+            if (unis[selec].Alumno.Count>0)
+            {
+                alumno_lb.Text = "Alumnos de "+unis[selec].Universidad+":";
+                alumnobt.Visible = true;
+            }
+            if (unis[selec].Profesor.Count > 0)
+            {
+                profesor_lb.Text = "Alumnos de " + unis[selec].Universidad + ":";
+                profebt.Visible = true;
+            }
+            if (unis[selec].Personal.Count > 0)
+                personal_lb.Text = "Alumnos de " + unis[selec].Universidad + ":";
         }
     }
 }

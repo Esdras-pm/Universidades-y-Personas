@@ -35,9 +35,14 @@
                 <SortedDescendingCellStyle BackColor="#CAC9C9" />
                 <SortedDescendingHeaderStyle BackColor="#00547E" />
             </asp:GridView>
+            <asp:Button ID="alumnobt" runat="server" CssClass="btn btn-primary btn-sm" Text="Modificar Alumno" Visible="False"/>
+            <br />
             <br />
             <asp:Label ID="profesor_lb" runat="server" Text=""></asp:Label>
             <asp:GridView ID="GridView3" runat="server" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3">
+                <Columns>
+                    <asp:CommandField ShowSelectButton="True" />
+                </Columns>
                 <FooterStyle BackColor="White" ForeColor="#000066" />
                 <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
                 <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
@@ -48,6 +53,8 @@
                 <SortedDescendingCellStyle BackColor="#CAC9C9" />
                 <SortedDescendingHeaderStyle BackColor="#00547E" />
             </asp:GridView>
+            <asp:Button ID="profebt" runat="server" CssClass="btn btn-primary btn-sm" Text="Eliminar Profesor" Visible="False" />
+            <br />
             <br />
             <asp:Label ID="personal_lb" runat="server" Text=""></asp:Label>
             <asp:GridView ID="GridView4" runat="server" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3">

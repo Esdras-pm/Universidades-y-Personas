@@ -114,6 +114,7 @@ namespace Universidades_y_Personas
             estudiante.Nombre = nombreA_txt.Text;
             estudiante.Apellido = apellidoA_txt.Text;
             estudiante.Direccion = direccionA_txt.Text;
+            estudiante.EdadP = estudiante.edad(Calendar1.SelectedDate);
             estudiante.Fechanac = Calendar1.SelectedDate;
             estudiante.Carne = carneal_txt.Text;
 
@@ -134,6 +135,7 @@ namespace Universidades_y_Personas
             estudiante.Nombre = nombreA_txt.Text;
             estudiante.Apellido = apellidoA_txt.Text;
             estudiante.Direccion = direccionA_txt.Text;
+            estudiante.EdadP = estudiante.edad(Calendar1.SelectedDate);
             estudiante.Fechanac = Calendar1.SelectedDate;
             estudiante.Id = id_txt.Text;
             estudiante.Titulo = titulo_txt.Text;
@@ -155,6 +157,7 @@ namespace Universidades_y_Personas
             estudiante.Nombre = nombreA_txt.Text;
             estudiante.Apellido = apellidoA_txt.Text;
             estudiante.Direccion = direccionA_txt.Text;
+            estudiante.EdadP = estudiante.edad(Calendar1.SelectedDate);
             estudiante.Fechanac = Calendar1.SelectedDate;
             estudiante.Igss = igss_txt.Text;
             estudiante.Profesion = profesion_txt.Text;

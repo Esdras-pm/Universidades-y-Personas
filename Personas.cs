@@ -11,12 +11,15 @@ namespace Universidades_y_Personas
         string apellido;
         string direccion;
         DateTime fechanac;
+        int edadP;
 
         public string Nombre { get => nombre; set => nombre = value; }
         public string Apellido { get => apellido; set => apellido = value; }
         public string Direccion { get => direccion; set => direccion = value; }
         public DateTime Fechanac { get => fechanac; set => fechanac = value; }
-        public int edad()
+        public int EdadP { get => edadP; set => edadP = value; }
+
+        public int edad(DateTime fechanac)
         {
             int años = DateTime.Today.Year - fechanac.Year;
             if (DateTime.Today.Month <= fechanac.Month)
