@@ -104,8 +104,12 @@ namespace Universidades_y_Personas
         protected void alumno_bt_Click(object sender, EventArgs e)
         {
             Universidades u = unis.Find(p => p.Universidad == uni_txt.Text);
-            if (u!=null)
+            if (u != null)
+            {
+                prof = u.Profesor;
                 al = u.Alumno;
+                pers = u.Personal;
+            }
             Alumnos estudiante = new Alumnos();
             estudiante.Nombre = nombreA_txt.Text;
             estudiante.Apellido = apellidoA_txt.Text;
@@ -120,8 +124,12 @@ namespace Universidades_y_Personas
         protected void profesor_bt_Click(object sender, EventArgs e)
         {
             Universidades u = unis.Find(p => p.Universidad == uni_txt.Text);
-            if (u!=null)
+            if (u != null)
+            {
                 prof = u.Profesor;
+                al = u.Alumno;
+                pers = u.Personal;
+            }
             Profesores estudiante = new Profesores();
             estudiante.Nombre = nombreA_txt.Text;
             estudiante.Apellido = apellidoA_txt.Text;
@@ -137,8 +145,12 @@ namespace Universidades_y_Personas
         protected void personal_bt_Click(object sender, EventArgs e)
         {
             Universidades u = unis.Find(p => p.Universidad == uni_txt.Text);
-            if (u!=null)
+            if (u != null)
+            {
+                prof = u.Profesor;
+                al = u.Alumno;
                 pers = u.Personal;
+            }
             PersonalAd estudiante = new PersonalAd();
             estudiante.Nombre = nombreA_txt.Text;
             estudiante.Apellido = apellidoA_txt.Text;
