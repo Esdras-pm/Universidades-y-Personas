@@ -25,6 +25,7 @@ namespace Universidades_y_Personas
                 if (json.Length > 0)
                     unis = JsonConvert.DeserializeObject<List<Universidades>>(json);
             }
+            MaintainScrollPositionOnPostBack = true;
         }
 
         void borrartodo()

@@ -43,7 +43,7 @@
             <asp:TextBox ID="carneal_txt" runat="server" Visible="False"></asp:TextBox>
             <br />
             <asp:Label ID="alumno_lb" runat="server" Text=""></asp:Label>
-            <asp:GridView ID="GridView2" runat="server" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" OnSelectedIndexChanged="GridView2_SelectedIndexChanged">
+            <asp:GridView ID="GridView2" runat="server" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" OnSelectedIndexChanged="GridView2_SelectedIndexChanged" OnRowDataBound="GridView2_RowDataBound1">
                 <Columns>
                     <asp:CommandField ShowSelectButton="True" />
                 </Columns>
@@ -61,7 +61,7 @@
             <br />
             <br />
             <asp:Label ID="profesor_lb" runat="server" Text=""></asp:Label>
-            <asp:GridView ID="GridView3" runat="server" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" OnSelectedIndexChanged="GridView3_SelectedIndexChanged">
+            <asp:GridView ID="GridView3" runat="server" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" OnSelectedIndexChanged="GridView3_SelectedIndexChanged" OnRowDataBound="GridView3_RowDataBound">
                 <Columns>
                     <asp:CommandField ShowSelectButton="True" />
                 </Columns>
@@ -79,7 +79,7 @@
             <br />
             <br />
             <asp:Label ID="personal_lb" runat="server" Text=""></asp:Label>
-            <asp:GridView ID="GridView4" runat="server" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3">
+            <asp:GridView ID="GridView4" runat="server" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" OnRowDataBound="GridView4_RowDataBound">
                 <FooterStyle BackColor="White" ForeColor="#000066" />
                 <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
                 <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
