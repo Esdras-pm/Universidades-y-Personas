@@ -22,8 +22,10 @@ namespace Universidades_y_Personas
 
             string json = jsonStream.ReadToEnd(); jsonStream.Close();
             unis = JsonConvert.DeserializeObject<List<Universidades>>(json);
+
             GridView1.DataSource = unis;
             GridView1.DataBind();
+            MaintainScrollPositionOnPostBack = true;
         }
         private void GuardarJson()
         {
@@ -72,11 +74,11 @@ namespace Universidades_y_Personas
             }
             if (unis[selec].Profesor.Count > 0)
             {
-                profesor_lb.Text = "Alumnos de " + unis[selec].Universidad + ":";
+                profesor_lb.Text = "Profesores de " + unis[selec].Universidad + ":";
                 profebt.Visible = true;
             }
             if (unis[selec].Personal.Count > 0)
-                personal_lb.Text = "Alumnos de " + unis[selec].Universidad + ":";
+                personal_lb.Text = "Personal administrativo de " + unis[selec].Universidad + ":";
             alumnomostrar(false);
         }
 
@@ -141,6 +143,21 @@ namespace Universidades_y_Personas
             aldireccion_txt.Text = unis[selec].Alumno[selec2].Direccion;
             alfechanac_cd.SelectedDate = unis[selec].Alumno[selec2].Fechanac;
             carneal_txt.Text = unis[selec].Alumno[selec2].Carne;
+        }
+
+        protected void GridView2_RowDataBound1(object sender, GridViewRowEventArgs e)
+        {
+            e.Row.Cells[5].Visible = false;
+        }
+
+        protected void GridView3_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            e.Row.Cells[5].Visible = false;
+        }
+
+        protected void GridView4_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            e.Row.Cells[7].Visible = false;
         }
     }
 }
